@@ -21,7 +21,9 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         port: 21
         protocol: ftp
-        server-dir: realestate.greenexbd.com/
+        # cPanel-এর ক্ষেত্রে অনেক সময় পাথটি / দিয়ে শুরু করতে হয়
+        server-dir: /realestate.greenexbd.com/
+        dangerously-allow-unverified-ssl: true
         exclude: |
           **/.git*
           **/.git*/**
